@@ -68,7 +68,7 @@ const AccessibilityWidget: React.FC<Props> = ({ largeText, setLargeText, highCon
             <button
                 ref={btnRef}
                 className="a11y-btn"
-                onClick={() => setOpen(v => !v)}
+                onClick={() => setOpen(!open)}
                 aria-expanded={open}
                 aria-controls="a11y-panel"
                 aria-label="Maxsus imkoniyatlar panelinini ochish"
@@ -100,7 +100,7 @@ const AccessibilityWidget: React.FC<Props> = ({ largeText, setLargeText, highCon
 
                     <button
                         className="a11y-option"
-                        onClick={() => setLargeText(v => !v)}
+                        onClick={() => setLargeText(!largeText)}
                         aria-pressed={largeText}
                         aria-label={largeText ? 'Katta shriftni o\'chirish' : 'Katta shrift yoqish'}
                     >
@@ -111,7 +111,7 @@ const AccessibilityWidget: React.FC<Props> = ({ largeText, setLargeText, highCon
 
                     <button
                         className="a11y-option"
-                        onClick={() => setHighContrast(v => !v)}
+                        onClick={() => setHighContrast(!highContrast)}
                         aria-pressed={highContrast}
                         aria-label={highContrast ? 'Yuqori kontrastni o\'chirish' : 'Yuqori kontrast yoqish'}
                     >

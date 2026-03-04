@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SocialRights.css';
 
 const rights = [
@@ -47,8 +47,6 @@ const rights = [
 ];
 
 const SocialRights: React.FC = () => {
-    const [expanded, setExpanded] = useState<number | null>(null);
-
     return (
         <section id="social-rights" className="social-rights" aria-labelledby="social-rights-title">
             <div className="container">
@@ -63,7 +61,7 @@ const SocialRights: React.FC = () => {
                     {rights.map((right, i) => (
                         <article
                             key={i}
-                            className={`card rights__card${expanded === i ? ' rights__card--expanded' : ''}`}
+                            className="card rights__card"
                             aria-label={right.title}
                         >
                             <div className="icon-box" aria-hidden="true">{right.icon}</div>
